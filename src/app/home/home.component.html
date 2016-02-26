@@ -1,0 +1,10 @@
+ <!-- template -->
+ <dashboard-layout>
+     <div class="home">
+       <pre *ngIf="loginData" class="loginData"><code>{{loginData.token}}</code></pre>
+        <!-- Anchor to call the secured API -->
+       <p><a (click)="callSecuredApi()">Call Se cure API</a></p>
+        <!-- Anchor to log the user out -->
+       <p><a (click)="logout()">Logout</a></p>
+     </div>
+</dashboard-layout>
