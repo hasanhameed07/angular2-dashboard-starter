@@ -11,11 +11,11 @@
 - Dashboard Layout as a separate directive
 - Best open source admin dashboard & control panel theme ['AdminLTE 2'](https://almsaeedstudio.com/) by Abdullah Almsaeed.
 
-## Running the Application
+## Installation
 
-1. Run `npm install` once to install app dependencies
-
-2. Run `npm start` in a separate terminal window to start the server and launch the app
+1. Checkout this repo in a folder make sure to give root permissions.
+2. Run `npm install` once to install app dependencies.
+3. Run `npm start` in a separate terminal window to start the server and launch the app.
 
 ## Protecting Routes
 

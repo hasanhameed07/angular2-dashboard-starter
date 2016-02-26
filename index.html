@@ -30,6 +30,10 @@
     <link rel="stylesheet" href="src/assets/css/skins/skin-blue.min.css">
     <!-- iCheck -->
     <link rel="stylesheet" href="src/assets/plugins/iCheck/square/blue.css">
+    <!-- Pace style -->
+    <link rel="stylesheet" href="src/assets/plugins/pace/pace.min.css">
+    <!-- PACE -->
+    <script src="src/assets/plugins/pace/pace.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,13 +41,23 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 
 
-     <app-container>
-         Loading...
-     </app-container>
+     <app-container></app-container>
+
+     <!--- AdminLTE --->
+     <!-- jQuery 2.1.4 -->
+     <script src="src/assets/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+     <!-- Bootstrap 3.3.5 -->
+     <script src="src/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+     <!-- AdminLTE App -->
+     <script src="src/assets/js/app.min.js"></script>
+     <!-- iCheck -->
+     <script src="src/assets/plugins/iCheck/icheck.min.js"></script>
+
 
    <!-- IE required polyfills (order matters) -->
    <script src="/node_modules/es6-shim/es6-shim.min.js"></script>
@@ -56,15 +70,7 @@
    <script src="/node_modules/angular2/bundles/router.dev.js"></script>
 
 
-   <!--- AdminLTE --->
-   <!-- jQuery 2.1.4 -->
-   <script src="src/assets/plugins/jQuery/jQuery-2.1.4.min.js"></script>
-   <!-- Bootstrap 3.3.5 -->
-   <script src="src/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-   <!-- AdminLTE App -->
-   <script src="src/assets/js/app.min.js"></script>
-   <!-- iCheck -->
-   <script src="src/assets/plugins/iCheck/icheck.min.js"></script>
+
 
 
     <script>
@@ -80,7 +86,7 @@
 
       System.import('./src/app/main')
             .then(null, console.error.bind(console));
-
+$(document).ajaxStart(function() { Pace.restart(); });
     </script>
 </body>
 </html>
