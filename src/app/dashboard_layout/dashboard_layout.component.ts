@@ -1,31 +1,36 @@
 // layout.component.js
 import { Component, View } from 'angular2/core';
 import { ROUTER_DIRECTIVES, Router, RouterLink, ComponentInstruction, CanActivate } from 'angular2/router';
-import { CORE_DIRECTIVES } from 'angular2/common';
+import { CORE_DIRECTIVES, NgIf } from 'angular2/common';
 import { DataService } from '../shared/services/data.service';
 import { checkAuth } from '../auth/check_auth';
-import { Auth } from '../auth/auth';
+import { Auth, LoginDataInterface } from '../auth/auth';
 
 @Component({
   selector: 'dashboard-layout',
+  inputs: ['pageTitle', 'pageSubtitle'],
   providers: [DataService]
 })
 
 @View({
   templateUrl: 'src/app/dashboard_layout/dashboard_layout.component.html',
-  directives: [ROUTER_DIRECTIVES]
+  directives: [ROUTER_DIRECTIVES, NgIf]
 })
 
-
 export class DashboardLayoutComponent {
+  public loginData: LoginDataInterface
+  public loggedIn: Boolean
+  public pageTitle: String
+  public pageSubtitle: String
 
   constructor(private _router: Router, private _auth:Auth) {
-      console.log('Layout');
+    this.loginData = this._auth.loginData;
+    this.loggedIn = this._auth.loggedIn;
   }
 
   logout() {
-
     this._auth.logout();
+    this._router.navigate(['/Login']); // r
   }
 
 }

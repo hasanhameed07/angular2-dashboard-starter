@@ -5,7 +5,7 @@ import { CORE_DIRECTIVES, NgIf } from 'angular2/common';
 import { DataService } from '../shared/services/data.service';
 import { DashboardLayoutComponent } from '../dashboard_layout/dashboard_layout.component';
 import { checkAuth } from '../auth/check_auth';
-import { Auth, LoginDataInterface } from '../auth/auth';
+import { Auth } from '../auth/auth';
 
 @Component({
   selector: 'home',
@@ -22,15 +22,7 @@ import { Auth, LoginDataInterface } from '../auth/auth';
 })
 
 export class HomeComponent {
-  loginData: LoginDataInterface
 
   constructor(private _router: Router, private _auth:Auth) {
-    this.loginData = this._auth.loginData;
-  }
-
-  logout() {
-
-    this._auth.logout();
-    this._router.navigate(['/Login']); // r
   }
 }
