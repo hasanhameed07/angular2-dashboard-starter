@@ -5,8 +5,8 @@ Ready to use dashboard starter/seed project based on Angular 2
 
 - Angular version 2.0.0-beta.6 using Typescript
 - Live reload & compile
-- Login module
-- Signup module (Todo)
+- Login module with input validations
+- Signup module with input validations
 - Auth module to protect dashboard pages
 - Dashboard Layout as a separate directive
 - Best open source admin dashboard & control panel theme ['AdminLTE 2'](https://almsaeedstudio.com/) by Abdullah Almsaeed.
