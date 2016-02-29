@@ -1,8 +1,8 @@
 # angular2-dashboard-starter
+Ready to use dashboard starter/seed project based on Angular 2
 
 ##Features
 
-- Ready to use dashboard starter/seed project based on Angular 2
 - Angular version 2.0.0-beta.6 using Typescript
 - Live reload & compile
 - Login module
@@ -17,7 +17,7 @@
 2. Run `npm install` once to install app dependencies.
 3. Run `npm start` in a separate terminal window to start the server and launch the app.
 
-## Protecting Routes
+## Protect Routes
 
 ```TypeScript
 import { ComponentInstruction, CanActivate } from 'angular2/router';
@@ -34,9 +34,9 @@ import { checkAuth } from '../auth/check_auth';
 Use DashboardLayout directive in your component's template to use dashboard layout. This makes easy for views in our app which do not utilize dashboard layout.
 
 ```HTML
-<dashboard-layout pageTitle="Home" pageSubtitle="Your personalized dashboard & control panel">
+<dashboard-layout pageTitle="Home" pageSubtitle="Your personalized dashboard and control panel">
     <div class="home">
-      <!--- Your template code --->
+      <!--- Your template code -->
     </div>
 </dashboard-layout>
 ```

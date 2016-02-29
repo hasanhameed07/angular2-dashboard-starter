@@ -7,21 +7,27 @@
     <p class="login-box-msg">Sign in to start your session</p>
 
         <!-- On form submit, we call the Login event with the username and the password from the inputs -->
-       <form role="form"  (submit)="login($event, username.value, password.value)">
+       <form  [ngFormModel]="form"  (submit)="login($event)">
         <fieldset>
             <div class="form-group">
-                <input class="form-control" #username placeholder="Username" name="username" type="text" autofocus>
+                <input ngControl="username" class="form-control" #username placeholder="Username" name="username" type="text" autofocus  maxlength="20">
+                <div class="control-msgs" *ngIf="username.dirty && !username.valid && !username.pending">
+          			  <p  *ngIf="username.errors.required">Username is required.</p>
+          			</div>
             </div>
             <div class="form-group">
-                <input class="form-control" #password placeholder="Password" name="password" type="password" value="">
+                <input ngControl="password" class="form-control" #password placeholder="Password" name="password" type="password" value="" maxlength="20">
+                <div class="control-msgs" *ngIf="password.dirty && !password.valid && !password.pending">
+                  <p *ngIf="password.errors.required">Password is required.</p>
+          			</div>
             </div>
-             <button type="submit" class="btn btn-lg btn-success btn-block">Login</button>
+             <button type="submit" [disabled]="!form.valid" class="btn btn-lg btn-success btn-block">Login</button>
         </fieldset>
        </form>
 
 
       <a href="#">I forgot my password</a><br>
-      <a href="register.html" class="text-center">Register a new membership</a>
+      <a [routerLink]="['Signup']" class="text-center">Register a new membership</a>
 
   </div>
   <!-- /.login-box-body -->

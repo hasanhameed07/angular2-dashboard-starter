@@ -1,7 +1,12 @@
 // login.component.js
 import { Component, View, ViewEncapsulation } from 'angular2/core';
-import { Router, RouterLink, ComponentInstruction, CanActivate  } from 'angular2/router';
-import { CORE_DIRECTIVES } from 'angular2/common';
+import { Router, RouterLink,  ComponentInstruction, CanActivate  } from 'angular2/router';
+import { CORE_DIRECTIVES,
+          FormBuilder,
+        	Validators,
+        	Control,
+        	ControlGroup,
+        	FORM_DIRECTIVES } from 'angular2/common';
 import { DataService } from '../shared/services/data.service';
 import { Auth } from '../auth/auth';
 import { checkAuth } from '../auth/check_auth';
@@ -9,6 +14,7 @@ import { checkAuth } from '../auth/check_auth';
 @Component({
   selector: 'login',
   providers: [DataService, Auth],
+  directives: [RouterLink],
   templateUrl: 'src/app/login/login.component.html',
   styles: [`
       body {
@@ -23,14 +29,25 @@ import { checkAuth } from '../auth/check_auth';
 })
 
 export class LoginComponent {
-  constructor(private _router: Router, private _dataService: DataService, private _auth: Auth) {
+  form: ControlGroup
+  username: Control
+  password: Control
+
+  constructor(private _router: Router, private _dataService: DataService, private _auth: Auth, private _formBuilder: FormBuilder) {
+    this.username = new Control("", Validators.compose([Validators.required]));
+    this.password = new Control("", Validators.compose([Validators.required]));
+
+    this.form = _formBuilder.group({
+      username:  this.username,
+      password:  this.password,
+    });
   }
 
-  login(event:Event, username:String, password:String) {
+  login(event:Event) {
     // This will be called when the user clicks on the Login button
     event.preventDefault();
 
-    this._dataService.loginUser()
+    this._dataService.loginUser(this.form.value)
     .subscribe((response) => {
 
         this._auth.login(response);

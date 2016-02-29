@@ -14,7 +14,7 @@ export const checkAuth = (next: ComponentInstruction, previous: ComponentInstruc
 
 			if (auth.check()) {
 				// already login, redirect to default page
-				if (next.urlPath=='login') {
+				if (next.urlPath=='login' || next.urlPath=='signup') {
 					router.navigate(['/Home']);	// r
 					// window.location.href = 'index.html';
 					resolve(false);
@@ -25,7 +25,7 @@ export const checkAuth = (next: ComponentInstruction, previous: ComponentInstruc
 				}
 			} else {
 				// not login; show the login page
-				if (next.urlPath=='login') {
+				if (next.urlPath=='login' || next.urlPath=='signup') {
 					resolve(true);
 				}
 				// restrict the page

@@ -1,0 +1,7 @@
+.ng-valid[required].ng-touched.ng-dirty {
+  border-left: 3px solid #42A948; /* green */
+}
+
+.ng-invalid.ng-touched.ng-dirty {
+  border-left: 3px solid #a94442; /* red */
+}

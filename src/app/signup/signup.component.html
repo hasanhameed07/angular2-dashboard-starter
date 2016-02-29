@@ -1,0 +1,78 @@
+ <!-- template -->
+<div class="register-box">
+  <div class="register-logo">
+    <b>A2DS</b> Signup
+  </div>
+
+  <div class="register-box-body">
+    <p class="login-box-msg">Register a new user</p>
+
+    <form  [ngFormModel]="form" >
+      <div class="form-group has-feedback">
+        <input required  ngControl="appName"  type="text" class="form-control" placeholder="App name" minlength="3"  maxlength="50">
+        <span class="glyphicon glyphicon-list-alt form-control-feedback"></span>
+        <div class="control-msgs" *ngIf="appName.dirty && !appName.valid && !appName.pending">
+  			  <p class="error-msg" *ngIf="appName.errors.required">App name is required.</p>
+  			  <p class="error-msg" *ngIf="appName.dirty && appName.touched && (appName.errors.minlength || appName.errors.maxlength)">App name must be between 3 to 50 in length.</p>
+  			</div>
+      </div>
+
+      <div class="form-group has-feedback">
+        <input required  ngControl="username" type="text" class="form-control" placeholder="Username" minlength="5" maxlength="20">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        <div class="control-msgs" *ngIf="username.dirty && !username.valid && !username.pending">
+  			  <p  *ngIf="username.errors.required">Username is required.</p>
+          <p class="error-msg" *ngIf="username.dirty && username.touched && (username.errors.minlength || username.errors.maxlength)">Username must be between 5 to 20 in length.</p>
+  			</div>
+      </div>
+
+      <div class="form-group has-feedback">
+        <input required ngControl="email" type="email" class="form-control" placeholder="Email" maxlength="50">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <div class="control-msgs" *ngIf="email.dirty && !email.valid && !email.pending">
+  			  <p *ngIf="email.errors.required">Email is required.</p>
+  			  <p *ngIf="email.errors.email">Email is not valid.</p>
+  			</div>
+      </div>
+
+      <div class="form-group has-feedback">
+        <input required ngControl="password" type="password" class="form-control" placeholder="Password" minlength="6" maxlength="20">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <div class="control-msgs" *ngIf="password.dirty && !password.valid && !password.pending">
+          <p *ngIf="password.errors.required">Password is required.</p>
+          <p class="error-msg" *ngIf="password.dirty && password.touched && (password.errors.minlength || password.errors.maxlength)">Password must be between 6 to 20 in length.</p>
+  			</div>
+      </div>
+
+      <div class="form-group has-feedback">
+        <input required ngControl="passwordConfirm" type="password" class="form-control" placeholder="Retype password" minlength="6" maxlength="20">
+        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+        <div class="control-msgs" *ngIf="passwordConfirm.dirty && !passwordConfirm.valid && !passwordConfirm.pending">
+  			  <p *ngIf="passwordConfirm.errors.required">Confirmation password is required.</p>
+        </div>
+        <div class="control-msgs" *ngIf="passwordConfirm.dirty && form.errors && form.errors.matchingPasswords">
+  			  <p *ngIf="form.errors.matchingPasswords">Passwords do not match.</p>
+  			</div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label>
+              <input type="checkbox"> I agree to the <a href="#">terms</a>
+            </label>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button  (click)="submitForm()" [disabled]="!form.valid" type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+
+
+    <a [routerLink]="['Login']" class="text-center">I already have a membership</a>
+  </div>
+  <!-- /.form-box -->
+</div>
