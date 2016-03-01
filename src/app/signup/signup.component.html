@@ -54,14 +54,10 @@
   			  <p *ngIf="form.errors.matchingPasswords">Passwords do not match.</p>
   			</div>
       </div>
-      
+
       <div class="row">
         <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> I agree to the <a href="#">terms</a>
-            </label>
-          </div>
+          <a [routerLink]="['Login']" class="text-center">I already have a membership</a>
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
@@ -72,7 +68,6 @@
     </form>
 
 
-    <a [routerLink]="['Login']" class="text-center">I already have a membership</a>
   </div>
   <!-- /.form-box -->
 </div>

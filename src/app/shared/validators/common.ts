@@ -28,18 +28,4 @@ export class CommonValidators {
         }
       }
 
-    static usernameTaken(control: Control): Promise<ValidationResult> {
-
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                if (control.value === "David") {
-                    resolve({"usernameTaken": true})
-                } else {
-                    resolve(null);
-                };
-
-            }, 1000);
-        });
-
-    }
 }
