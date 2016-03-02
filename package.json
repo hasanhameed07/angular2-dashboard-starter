@@ -9,7 +9,7 @@
     "postinstall": "npm run typings install",
     "tsc": "tsc",
     "tsc:w": "tsc --watch",
-    "live": "live-server --ignore=src",
+    "live": "live-server",
     "start": "concurrent \"npm run tsc:w\" \"npm run live\" ",
     "typings": "typings"
   },
