@@ -40,3 +40,7 @@ Use DashboardLayout directive in your component's template to use dashboard layo
     </div>
 </dashboard-layout>
 ```
+
+
+Help me make it better by [contributing](./CONTRIBUTING.md)
+@author Hasan Hameed <hasan.hameed07@gmail.com>
