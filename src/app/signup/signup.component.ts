@@ -65,7 +65,15 @@ export class SignupComponent implements AfterViewInit {
     }
 
     submitForm() {
-        console.log(JSON.stringify(this.form.value))
+        console.log(JSON.stringify(this.form.value));
+
+        this._dataService.signupUser(this.form.value)
+            .subscribe((response) => {
+                // login user
+                this._auth.login(response);
+                // and then we redirect the user to the home
+                this._router.navigate(['\Home']);
+            });
     }
 
 }
