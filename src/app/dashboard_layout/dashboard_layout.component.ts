@@ -1,4 +1,4 @@
-// layout.component.js
+// dashboard.component.js
 import { Component, View } from 'angular2/core';
 import { ROUTER_DIRECTIVES, Router, RouterLink, ComponentInstruction, CanActivate } from 'angular2/router';
 import { CORE_DIRECTIVES, NgIf } from 'angular2/common';

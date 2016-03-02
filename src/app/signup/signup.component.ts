@@ -1,4 +1,4 @@
-// login.component.js
+// signup.component.js
 import { Component, View, ViewEncapsulation, AfterViewInit } from 'angular2/core';
 import { Router, RouterLink, ComponentInstruction, CanActivate  } from 'angular2/router';
 import { CORE_DIRECTIVES,

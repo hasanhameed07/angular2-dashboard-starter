@@ -1,4 +1,4 @@
-// login.component.js
+// home.component.js
 import { Component, View } from 'angular2/core';
 import { Router, RouterLink, ComponentInstruction, CanActivate } from 'angular2/router';
 import { CORE_DIRECTIVES, NgIf } from 'angular2/common';
