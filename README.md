@@ -5,7 +5,7 @@ Ready to use dashboard starter/seed project based on Angular 2
 
 - Angular version 2.0.0-beta.6 using Typescript
 - Live reload & compile
-- Login module with input validations
+- Login module with input validations (Utilizes src/login.json)
 - Signup module with input validations
 - Auth module to protect dashboard pages
 - Dashboard Layout as a separate directive
@@ -42,5 +42,8 @@ Use DashboardLayout directive in your component's template to use dashboard layo
 ```
 
 
+
+
 Help me make it better by [contributing](./CONTRIBUTING.md)
+
 @author Hasan Hameed <hasan.hameed07@gmail.com>

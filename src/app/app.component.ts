@@ -12,16 +12,16 @@ import { HomeComponent } from './home/home.component';
     directives: [ROUTER_DIRECTIVES],
 })
 @RouteConfig([
-  { path: '/home', as: 'Home', component: HomeComponent, useAsDefault: true},
-  { path: '/login', as: 'Login', component: LoginComponent },
-  { path: '/signup', as: 'Signup', component: SignupComponent },
-  { path: '/**', redirectTo: ['Home'] }
+    { path: '/home', as: 'Home', component: HomeComponent, useAsDefault: true },
+    { path: '/login', as: 'Login', component: LoginComponent },
+    { path: '/signup', as: 'Signup', component: SignupComponent },
+    { path: '/**', redirectTo: ['Home'] }
 ])
 export class AppComponent {
 
 
-  constructor() {
-  }
+    constructor() {
+    }
 
 
 }

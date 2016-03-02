@@ -7,30 +7,30 @@ import { checkAuth } from '../auth/check_auth';
 import { Auth, LoginDataInterface } from '../auth/auth';
 
 @Component({
-  selector: 'dashboard-layout',
-  inputs: ['pageTitle', 'pageSubtitle'],
-  providers: [DataService]
+    selector: 'dashboard-layout',
+    inputs: ['pageTitle', 'pageSubtitle'],
+    providers: [DataService]
 })
 
 @View({
-  templateUrl: 'src/app/dashboard_layout/dashboard_layout.component.html',
-  directives: [ROUTER_DIRECTIVES, NgIf]
+    templateUrl: 'src/app/dashboard_layout/dashboard_layout.component.html',
+    directives: [ROUTER_DIRECTIVES, NgIf]
 })
 
 export class DashboardLayoutComponent {
-  public loginData: LoginDataInterface
-  public loggedIn: Boolean
-  public pageTitle: String
-  public pageSubtitle: String
+    public loginData: LoginDataInterface
+    public loggedIn: Boolean
+    public pageTitle: String
+    public pageSubtitle: String
 
-  constructor(private _router: Router, private _auth:Auth) {
-    this.loginData = this._auth.loginData;
-    this.loggedIn = this._auth.loggedIn;
-  }
+    constructor(private _router: Router, private _auth: Auth) {
+        this.loginData = this._auth.loginData;
+        this.loggedIn = this._auth.loggedIn;
+    }
 
-  logout() {
-    this._auth.logout();
-    this._router.navigate(['/Login']); // r
-  }
+    logout() {
+        this._auth.logout();
+        this._router.navigate(['/Login']); // r
+    }
 
 }

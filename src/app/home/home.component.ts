@@ -23,6 +23,6 @@ import { Auth } from '../auth/auth';
 
 export class HomeComponent {
 
-  constructor(private _router: Router, private _auth:Auth) {
+  constructor(private _router: Router, private _auth: Auth) {
   }
 }

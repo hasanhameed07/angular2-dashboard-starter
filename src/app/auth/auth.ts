@@ -22,7 +22,7 @@ export class Auth {
 
     loginFromSession() {
         // load from session
-        if (localStorage.getItem("a2authLoginData") !== null  && this.loggedIn===false) {
+        if (localStorage.getItem("a2authLoginData") !== null && this.loggedIn === false) {
             console.log('loginFromSession()');
             var a2authLoginData = JSON.parse(localStorage.getItem("a2authLoginData"));
             console.log(a2authLoginData);
