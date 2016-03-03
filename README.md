@@ -1,14 +1,13 @@
 # angular2-dashboard-starter
 Ready to use dashboard starter/seed project based on Angular 2 and AdminLTE bootstrap theme.
 
-[![Angular version](https://badge.fury.io/js/angular2.svg)](https://github.com/angular/angular)
 [![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![dependencies: up tp date](https://david-dm.org/hasanhameed07/angular2-dashboard-starter.svg)](https://david-dm.org/hasanhameed07/angular2-dashboard-starter)
+[![dependencies up to date](https://david-dm.org/hasanhameed07/angular2-dashboard-starter.svg)](https://david-dm.org/hasanhameed07/angular2-dashboard-starter)
 [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](http://stackshare.io/hasanhameed07/angular2-dashboard-starter)
 
 ##Features
 
-- [Angular 2](https://angular.io/) latest version 2.0.0-beta.7 using [Typescript](http://www.typescriptlang.org/)
+- [Angular 2](https://angular.io/) version 2.0.0-beta.7 using [Typescript](http://www.typescriptlang.org/)
 - Live reload & compile
 - Login module with input validations (Utilizes src/login.json)
 - Signup module with input validations
