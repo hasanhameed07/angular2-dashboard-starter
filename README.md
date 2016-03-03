@@ -1,7 +1,6 @@
 # angular2-dashboard-starter
 Ready to use dashboard starter/seed project based on Angular 2 and AdminLTE bootstrap theme.
 
-[![Current version](https://badge.fury.io/gh/hasanhameed07%2Fangular2-dashboard-starter.svg)](https://github.com/hasanhameed07/angular2-dashboard-starter)
 [![Angular version](https://badge.fury.io/js/angular2.svg)](https://github.com/angular/angular)
 [![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![dependencies: up tp date](https://david-dm.org/hasanhameed07/angular2-dashboard-starter.svg)](https://david-dm.org/hasanhameed07/angular2-dashboard-starter)
