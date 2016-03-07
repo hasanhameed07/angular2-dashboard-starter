@@ -7,7 +7,7 @@ Ready to use dashboard starter/seed project based on Angular 2 and AdminLTE boot
 
 ##Features
 
-- [Angular 2](https://angular.io/) version 2.0.0-beta.7 using [Typescript](http://www.typescriptlang.org/)
+- [Angular 2](https://angular.io/) version 2.0.0-beta.8 using [Typescript](http://www.typescriptlang.org/)
 - Live reload & compile
 - Login module with input validations (Utilizes src/login.json)
 - Signup module with input validations
