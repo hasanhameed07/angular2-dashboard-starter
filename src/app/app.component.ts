@@ -1,9 +1,9 @@
 // app.component.js
 import { Component, OnInit } from 'angular2/core';
 import { ROUTER_DIRECTIVES, RouteConfig, ComponentInstruction, CanActivate } from 'angular2/router';
-import { checkAuth } from './auth/check_auth';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
+import { checkAuth } from './auth_module/auth/check_auth';
+import { LoginComponent } from './auth_module/login/login.component';
+import { SignupComponent } from './auth_module/signup/signup.component';
 import { HomeComponent } from './home/home.component';
 
 

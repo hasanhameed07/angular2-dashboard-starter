@@ -7,8 +7,8 @@ import { CORE_DIRECTIVES,
     Control,
     ControlGroup,
     FORM_DIRECTIVES } from 'angular2/common';
-import { CommonValidators } from '../shared/validators/common';
-import { DataService } from '../shared/services/data.service';
+import { CommonValidators } from '../../shared/validators/common';
+import { DataService } from '../../shared/services/data.service';
 import { Auth } from '../auth/auth';
 import { checkAuth } from '../auth/check_auth';
 
@@ -18,7 +18,7 @@ declare var jQuery: JQueryStatic;
     selector: 'signup',
     providers: [DataService, Auth],
     directives: [FORM_DIRECTIVES, RouterLink],
-    templateUrl: 'src/app/signup/signup.component.html',
+    templateUrl: 'src/app/auth_module/signup/signup.component.html',
     styles: [`
       body {
           background: #d2d6de;

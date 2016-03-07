@@ -3,8 +3,8 @@ import { Component, View } from 'angular2/core';
 import { ROUTER_DIRECTIVES, Router, RouterLink, ComponentInstruction, CanActivate } from 'angular2/router';
 import { CORE_DIRECTIVES, NgIf } from 'angular2/common';
 import { DataService } from '../shared/services/data.service';
-import { checkAuth } from '../auth/check_auth';
-import { Auth, LoginDataInterface } from '../auth/auth';
+import { checkAuth } from '../auth_module/auth/check_auth';
+import { Auth, LoginDataInterface } from '../auth_module/auth/auth';
 
 @Component({
     selector: 'dashboard-layout',

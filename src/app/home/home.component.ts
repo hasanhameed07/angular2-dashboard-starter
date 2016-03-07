@@ -4,8 +4,8 @@ import { Router, RouterLink, ComponentInstruction, CanActivate } from 'angular2/
 import { CORE_DIRECTIVES, NgIf } from 'angular2/common';
 import { DataService } from '../shared/services/data.service';
 import { DashboardLayoutComponent } from '../dashboard_layout/dashboard_layout.component';
-import { checkAuth } from '../auth/check_auth';
-import { Auth } from '../auth/auth';
+import { checkAuth } from '../auth_module/auth/check_auth';
+import { Auth } from '../auth_module/auth/auth';
 
 @Component({
   selector: 'home',

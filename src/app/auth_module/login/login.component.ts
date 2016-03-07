@@ -7,7 +7,7 @@ import { CORE_DIRECTIVES,
     Control,
     ControlGroup,
     FORM_DIRECTIVES } from 'angular2/common';
-import { DataService } from '../shared/services/data.service';
+import { DataService } from '../../shared/services/data.service';
 import { Auth } from '../auth/auth';
 import { checkAuth } from '../auth/check_auth';
 
@@ -15,7 +15,7 @@ import { checkAuth } from '../auth/check_auth';
     selector: 'login',
     providers: [DataService, Auth],
     directives: [RouterLink],
-    templateUrl: 'src/app/login/login.component.html',
+    templateUrl: 'src/app/auth_module/login/login.component.html',
     styles: [`
       body {
           background: #d2d6de;

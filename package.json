@@ -1,7 +1,7 @@
 {
   "name": "angular2-dashboard-starter",
   "author": "Hasan Hameed",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Ready to use dashboard starter/seed project based on Angular 2 and AdminLTE theme.",
   "homepage": "https://github.com/hasanhameed07/angular2-dashboard-starter",
   "license": "MIT",
@@ -21,7 +21,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "angular2": "2.0.0-beta.7",
+    "angular2": "2.0.0-beta.8",
     "systemjs": "0.19.20",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
