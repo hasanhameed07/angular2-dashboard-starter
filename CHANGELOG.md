@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 1.2.0 (2016-03-08)
+
+### Features
+- Environmental Configuration settings
+- Custom Router Directive
+
+
+
 ## Version 1.1.0 (2016-03-04)
 
 ### Folder Structure
@@ -7,6 +15,7 @@
 
 ### Dependencies Updates
 - angular updated from version 2.0.0-beta.7 to 2.0.0-beta.8 (2016-03-02) [See Changelog](https://github.com/angular/angular/blob/master/CHANGELOG.md).
+
 
 
 ## Version 1.0.0 (2016-03-03)

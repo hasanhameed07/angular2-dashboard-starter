@@ -5,10 +5,12 @@ import { ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy } from 'angula
 import { HTTP_PROVIDERS } from 'angular2/http';
 import { AppComponent } from './app.component';
 import { Auth } from './auth_module/auth/auth';
+import { Config } from './config/config'
 import { appInjector } from './auth_module/auth/app_injector';
 
 bootstrap(AppComponent, [
     Auth,
+    Config,
     ROUTER_PROVIDERS,
     FORM_PROVIDERS,
     HTTP_PROVIDERS,

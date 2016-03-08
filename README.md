@@ -12,6 +12,7 @@ Ready to use dashboard starter/seed project based on Angular 2 and AdminLTE boot
 - Login module with input validations (Utilizes src/login.json)
 - Signup module with input validations
 - Auth module to protect dashboard pages
+- Environmental Configuration settings
 - Dashboard Layout as a separate directive
 - Best open source admin dashboard & control panel bootstrap theme ['AdminLTE 2'](https://almsaeedstudio.com/) by Abdullah Almsaeed.
 
@@ -43,6 +44,43 @@ Use DashboardLayout directive in your component's template to use dashboard layo
       <!--- Your template code -->
     </div>
 </dashboard-layout>
+```
+
+## Configuration
+
+Environmental files are located in `src/app/config/` folder in json format. You can create your own environments and set the one to use in `env.json` file. Config files are loaded after the route hits and before everything is initiated therefore, available throughout in application as a service.
+
+```TypeScript
+import {Config} from '../../config/config';
+
+@Injectable()
+export class Foo {
+
+    constructor(private _http: Http, private _config: Config) {
+      var apiUrl = _config.get('apiUrl');   // from development.json
+      var env = _config.getEnv('env');      // from env.json (also holds shared config)
+    }
+}
+```
+Config class also ships with methods to store and get application wide custom settings.
+
+```TypeScript
+import {Config} from '../../config/config';
+
+@Injectable()
+export class Foo {
+
+    constructor(private _http: Http, private _config: Config) {
+      _config.setCustom('isMember', true);
+    }
+}
+
+export class Bar {
+
+    constructor(private _config: Config) {
+      var isMember = _config.getCustom('isMember');
+    }
+}
 ```
 
 ## Use jQuery  
